@@ -1,0 +1,47 @@
+.container{
+    margin-left:15vw;
+    width:65vw;
+    height:65vh;
+    margin-top: 10vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom,black,rgb(9, 9, 49),rgb(17, 17, 57),rgb(32, 32, 72));
+    border-radius: 9px;
+}
+.fields{
+   border-radius: 5px;
+   width:17vw;
+   height:3vh;
+   font-size: 13px;
+}
+#firstname{
+    margin-left:3vw;
+}
+#lastname{
+    margin-left: 3.25vw;
+}
+#email{
+    margin-left: 5.75vw;
+}
+#password1{
+    margin-left:3.55vw;
+}
+.divs{
+    margin-top: 9vw;
+    color:white
+}
+.title{
+    margin-left: 2vw;
+}
+#para{
+    font-weight: bold;
+    margin-left:9vw ;
+}
+#line{
+    width: 75vw;
+    margin-top: 5vh;
+    border-radius: 15px;
+    height:none;
+    background-color: red;
+}
