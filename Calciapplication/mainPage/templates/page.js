@@ -1,8 +1,24 @@
-let num1=document.getElementById('num').value;
-let num2=document.getElementById('num').value;
-let buttons=document.getElementsByClassName('btns').value;
-let screen=documet.getElementById('screenid');
-let operator=documet.getElementById('oper').value;
-buttons.addEventListener('click',function(){
-
+let display=document.getElementById('screen-id');
+let buttons=Array.from(document.getElementsByClassName('btns'));
+buttons.map( buttons =>{
+    buttons.addEventListener('click',(e)=>{
+        switch(e.target.innerText){
+            case 'AC':
+                display.innerText='';
+                break;
+            case 'X':
+                display.innerText=display.innerText.slice(0,-1);
+                break;
+            case '=':
+                try{
+                    display.innerText=display.innerText+"\n"+"\n"+"="+eval(display.innerText);
+                }catch{
+                    display.innerText='Error';
+                }
+                
+                break;
+            default:
+                display.innerText+=e.target.innerText;
+        }
+    })
 })
