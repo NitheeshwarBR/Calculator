@@ -1,6 +1,5 @@
 body{
     display: flex;
-
     justify-content: center;
     margin-top: 15vh;
     background-image:linear-gradient(to right,pink,rgb(222, 121, 138),rgb(233, 9, 233));

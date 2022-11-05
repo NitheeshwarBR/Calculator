@@ -1,0 +1,78 @@
+body{
+    display: flex;
+
+    justify-content: center;
+    margin-top: 15vh;
+    background-image:linear-gradient(to right,pink,rgb(222, 121, 138),rgb(233, 9, 233));
+}
+.container{
+    background-color: black;
+    width:20vw;
+    height:75vh;
+    border-radius: 15px;
+    box-shadow:0px 0px 43px 17px rgba(153,153,153,122);
+   
+   
+}
+.screen{
+    background-color: rgb(28, 26, 26);
+    width:20vw;
+    height:30vh;
+    border-radius: 10px;
+}
+#screen-id{
+    color:white;
+    font-size:45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#line{
+    background-color:rgb(57, 26, 26);
+    width:100%;
+}
+.functions{
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+.btns{
+    margin-left: 25px;
+    width:3vw;
+    height:6vh;
+    font-weight: 900;
+    font-size: large;
+    border-radius:15px;
+}
+.btns:active{
+    scale:0.9;
+}
+#row1{
+    background-color: rgb(175, 175, 230);
+    color:rgb(6, 7, 7);
+    font-weight: 600;
+}
+#equal{
+    background-color: rgb(1, 188, 250);
+    color:rgb(168, 21, 21);
+}
+#row2{
+    background-color: rgb(57, 52, 52);
+    color:white;
+    font-weight: 900;
+}
+#row3{
+    background-color: rgb(57, 52, 52);
+    color:white;
+}
+#row4{
+    background-color: rgb(57, 52, 52);
+    color:white;
+}
+#row5{
+    background-color: rgb(57, 52, 52);
+    color:white;
+}
+
+
+

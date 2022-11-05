@@ -27,6 +27,8 @@ SECRET_KEY = 'django-insecure-v8$q_ial-id0(%-57z*j&8oyr!801ha8o9!o(nro31k%g*plh9
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+APPEND_SLASH=False
+
 
 
 # Application definition
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
     'mainPage.apps.MainpageConfig'
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -50,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'Calciapplication.urls'
 
@@ -123,6 +127,7 @@ MEDIA_URL = '/images/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR / "mainPage/static"),
 ]
+STATIC_ROOT='Calciapplication\mainPage\static'
 
 
 # Default primary key field type

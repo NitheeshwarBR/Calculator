@@ -1,14 +1,12 @@
-{% load static %}
-
+{%load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="{%static '../static/css/page.css'%}">
+    <link rel="stylesheet" href="{%static '../static/css/page.css' %}">>
 </head>
 
 <body>
@@ -16,60 +14,58 @@
         <div class="screen" id="screen-id"></div>
 
         <div class="functions">
-            <button class="btns" id="row1">AC</button>
-            <button class="btns" id="row1">X</button>
-            <button class="btns" id="row1">+/-</button>
-            <button class="btns" id="row1">/</button>
+            <button  class="btns" id="row1">AC</button>
+            <button  class="btns" id="row1">X</button>
+            <button  class="btns" id="row1">+/-</button>
+            <button  class="btns" id="row1">/</button>
             <br><br>
-            <button class="btns" id="row2">7</button>
-            <button class="btns" id="row2">8</button>
-            <button class="btns" id="row2">9</button>
-            <button class="btns" id="row1">*</button>
+            <button  class="btns" id="row2">7</button>
+            <button  class="btns" id="row2" >8</button>
+            <button  class="btns" id="row2" >9</button>
+            <button  class="btns" id="row1" >*</button>
             <br><br>
-            <button class="btns" id="row3">4</button>
-            <button class="btns" id="row3">5</button>
-            <button class="btns" id="row3">6</button>
-            <button class="btns" id="row1">-</button>
+            <button  class="btns" id="row3" >4</button>
+            <button  class="btns" id="row3" >5</button>
+            <button  class="btns" id="row3" >6</button>
+            <button  class="btns" id="row1" >-</button>
             <br><br>
-            <button class="btns" id="row4">1</button>
-            <button class="btns" id="row4">2</button>
-            <button class="btns" id="row4">3</button>
-            <button class="btns" id="row1">+</button>
+            <button  class="btns" id="row4" >1</button>
+            <button  class="btns" id="row4" >2</button>
+            <button  class="btns" id="row4">3</button>
+            <button  class="btns" id="row1">+</button>
             <br><br>
-            <button class="btns" id="row5">%</button>
-            <button class="btns" id="row5">0</button>
-            <button class="btns" id="row5">.</button>
-            <button class="btns" id="equal">=</button>
+            <button  class="btns" id="row5">%</button>
+            <button  class="btns" id="row5">0</button>
+            <button  class="btns" id="row5">.</button>
+            <button  class="btns" id="equal">=</button>
         </div>
     </div>
-    {%block script%}
-    <script>
-        let display = document.getElementById('screen-id');
-        let buttons = Array.from(document.getElementsByClassName('btns'));
-        buttons.map(buttons => {
-            buttons.addEventListener('click', (e) => {
-                switch (e.target.innerText) {
+    <script>let display=document.getElementById('screen-id');
+        let buttons=Array.from(document.getElementsByClassName('btns'));
+        buttons.map( buttons =>{
+            buttons.addEventListener('click',(e)=>{
+                switch(e.target.innerText){
                     case 'AC':
-                        display.innerText = '';
+                        display.innerText='';
                         break;
                     case 'X':
-                        display.innerText = display.innerText.slice(0, -1);
+                        display.innerText=display.innerText.slice(0,-1);
                         break;
                     case '=':
-                        try {
-                            display.innerText = display.innerText + "\n" + "\n" + "=" + eval(display.innerText);
-                        } catch {
-                            display.innerText = 'Error';
+                        try{
+                            display.innerText=display.innerText+"\n"+"\n"+"="+eval(display.innerText);
+                        
+                        }catch{
+                            display.innerHTML='ERROR';
+                            break;
                         }
-
                         break;
                     default:
-                        display.innerText += e.target.innerText;
+                        display.innerText+=e.target.innerText;
                 }
-            });
-        });
-    </script>
-    {%endblock%}
+            })
+        })
+        </script>
 </body>
 
 </html>

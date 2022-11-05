@@ -11,23 +11,27 @@
 </head>
 
 <body>
+  
     <div class="container">
         <h1 class="title">LOGIN</h1>
         
-        <form class="form-field">
+        <form class="form-field" method="post">
+            {% csrf_token %}
             <fieldset class="field">
                 <label for="username">Username: </label>
-                <input type="text" id="username">
+                <input type="email" id="email" name="emailid">
                 <br><br>
                 <label for="password">Password</label>
-                <input type="password" id="password">
+                <input type="password" id="password" name="pass">
                 <br><br>
-                <button id="login"><a href="login/" style="color:black">Login</button>
+                <button id="login"><a href="login/">Login</a></button>
                 <button id="signup"><a href="signup/" style="color:black">SignUp</a></button>
             </fieldset>
     
         </form>
+        
     </div>
+    
    
 </body>
 
